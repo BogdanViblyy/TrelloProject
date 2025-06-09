@@ -1,0 +1,153 @@
+/* General body styling and font */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    overflow: hidden; /* Prevent scrolling of the whole page */
+}
+
+/* Main container using flexbox for layout */
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 300px;
+    background-color: #ffffff;
+    border-right: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.notes-list {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow scrolling only for the notes list */
+}
+
+/* Individual note item in the list */
+.note-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.note-item:hover {
+    background-color: #f5f5f5;
+}
+
+.note-item.selected {
+    background-color: #dbeaff;
+}
+
+.note-item-title {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ... if title is too long */
+}
+
+/* Editor area styles */
+.editor-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #888;
+    font-size: 1.2em;
+}
+
+.editor-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.editor-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.note-title-input, .note-content-input {
+    border: none;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.note-title-input {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.note-content-input {
+    flex-grow: 1;
+    resize: none; /* Disable manual resizing of textarea */
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+.note-title-input:focus, .note-content-input:focus {
+    outline: none;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Button styles */
+.btn {
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+#add-note-btn {
+    color: #007bff;
+}
+
+#add-note-btn:hover {
+    background-color: #e9ecef;
+}
+
+.btn-danger {
+    font-size: 14px;
+    color: #fff;
+    background-color: #dc3545;
+    padding: 8px 15px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
