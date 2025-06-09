@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusNotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for notes list and controls -->
+        <div class="sidebar">
+            <header class="sidebar-header">
+                <h1>FocusNotes</h1>
+                <button id="add-note-btn" class="btn">+</button>
+            </header>
+            <div id="notes-list" class="notes-list">
+                <!-- Notes will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Main editor area -->
+        <div class="editor-container">
+            <div id="editor-placeholder" class="editor-placeholder">
+                <p>Select a note to edit or create a new one.</p>
+            </div>
+            <div id="editor-main" class="editor-main hidden">
+                <div class="editor-controls">
+                    <label for="note-color-input">Color:</label>
+                    <input type="color" id="note-color-input" value="#ffffff">
+                    <button id="delete-note-btn" class="btn btn-danger">Delete</button>
+                </div>
+                <input type="text" id="note-title-input" class="note-title-input" placeholder="Note Title">
+                <textarea id="note-content-input" class="note-content-input" placeholder="Start writing here..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
